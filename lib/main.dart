@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'DetailsScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -77,6 +77,7 @@ class ScrollingPart extends StatelessWidget {
                 children: <Widget>[
                    Container(
                     height: 200,
+                     margin: EdgeInsets.only(left: 0, top:0, right: 0, bottom:10),
                     decoration:  BoxDecoration(
                       image:  DecorationImage(
                         image: AssetImage('images/image1.png'),
@@ -90,6 +91,7 @@ class ScrollingPart extends StatelessWidget {
                         Container(
                           height: 150,
                       width: 200,
+                          margin: EdgeInsets.only(left: 5, top:0, right: 5, bottom:0),
                       decoration:  BoxDecoration(
                         image:  DecorationImage(
                           image: AssetImage('images/image2.png'),
@@ -99,7 +101,7 @@ class ScrollingPart extends StatelessWidget {
                       ),
                         Container(
                           height: 150,
-                          width: 200,
+                          width: 210,
                           decoration:  BoxDecoration(
                             image:  DecorationImage(
                               image: AssetImage('images/image3.png'),
@@ -115,8 +117,9 @@ class ScrollingPart extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 100,
+                          height: 80,
                           width: 200,
+                          margin: EdgeInsets.only(left: 5, top:0, right: 5, bottom:0),
                           decoration:  BoxDecoration(
                             image:  DecorationImage(
                               image: AssetImage('images/image4.png'),
@@ -125,8 +128,8 @@ class ScrollingPart extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 200,
+                          height: 80,
+                          width: 210,
                           decoration:  BoxDecoration(
                             image:  DecorationImage(
                               image: AssetImage('images/image5.png'),
@@ -139,7 +142,8 @@ class ScrollingPart extends StatelessWidget {
 
                   ),
                   Container(
-                    height: 200.0,
+                    margin: EdgeInsets.all(10),
+                    height: 140.0,
                     child: Column(
                       children: [
                       Align(
@@ -193,24 +197,69 @@ class ScrollingPart extends StatelessWidget {
                   ),
                   Container(
                     // Another fixed-height child.
-                    color: const Color(0xff008000), // Green
-                    height: 120.0,
-                    alignment: Alignment.center,
-                    child: const Text('Fixed Height Content'),
+                    height: 30.0,
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                      children: [
+                        Container(
+                            margin: EdgeInsets.only(left: 50, top:0, right: 0, bottom:0),
+
+                            child: Text('60% Off', style: TextStyle(fontWeight: FontWeight.w800),)
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(left: 75, top:0, right: 00, bottom:0),
+
+                            child: Text('35% Off', style: TextStyle(fontWeight: FontWeight.w800),)
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(left: 75, top:0, right: 00, bottom:0),
+
+                            child: Text('55% Off', style: TextStyle(fontWeight: FontWeight.w800),)
+                        ),
+                      ]
+                    ),
                   ),
                   Container(
                     // Another fixed-height child.
-                    color: const Color(0xff008000), // Green
-                    height: 120.0,
-                    alignment: Alignment.center,
-                    child: const Text('Fixed Height Content'),
+                    height: 30.0,
+                    alignment: Alignment.centerLeft,
+                    child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 65, top:0, right: 0, bottom:0),
+
+                              child: Text('PPE', style: TextStyle(fontWeight: FontWeight.w600),)
+                          ),
+                          Container(
+                              margin: EdgeInsets.only(left: 85, top:0, right: 00, bottom:0),
+
+                              child: Text('Ayurveda', style: TextStyle(fontWeight: FontWeight.w600),)
+                          ),
+                          Container(
+                              margin: EdgeInsets.only(left: 75, top:0, right: 00, bottom:0),
+
+                              child: Text('Skin Care', style: TextStyle(fontWeight: FontWeight.w600),)
+                          ),
+                        ]
+                    ),
                   ),
                   Container(
-                    // Another fixed-height child.
-                    color: const Color(0xff008000), // Green
-                    height: 120.0,
+                    height: 40.0,
                     alignment: Alignment.center,
-                    child: const Text('Fixed Height Content'),
+                    child:  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Center(
+                          child: ElevatedButton(
+                            child: Text('Show Cart'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => DetailsScreen()),
+                              );
+                            },
+                          ),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -324,25 +373,3 @@ class HomeWidget extends StatelessWidget {
     );
   }
 }
-
-// Container(
-// child: StaggeredGridView.count(
-// crossAxisCount: 2,
-// crossAxisSpacing: 8.0,
-// mainAxisSpacing: 8.0,
-// children: [
-// image1,
-// image2,
-// image3,
-// image4,
-// image5,
-// ],
-// staggeredTiles: [
-// StaggeredTile.extent(2, 200.0),
-// StaggeredTile.extent(1, 200.0),
-// StaggeredTile.extent(1, 200.0),
-// StaggeredTile.extent(1, 90.0),
-// StaggeredTile.extent(1, 90.0),
-// ],
-// ),
-// );
