@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'DetailsScreen.dart';
 
 void main() {
@@ -14,20 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.teal,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        // visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyStatefulWidget(),
     );
@@ -46,8 +34,6 @@ class ScrollingPart extends StatelessWidget {
               children: <Widget>[
                 Container(
                   height: 200,
-                  margin:
-                      EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 10),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('images/image1.png'),
@@ -57,12 +43,11 @@ class ScrollingPart extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
                         height: 150,
-                        width: 200,
-                        margin: EdgeInsets.only(
-                            left: 5, top: 0, right: 5, bottom: 0),
+                        width: 180,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/image2.png'),
@@ -72,7 +57,7 @@ class ScrollingPart extends StatelessWidget {
                       ),
                       Container(
                         height: 150,
-                        width: 210,
+                        width: 180,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/image3.png'),
@@ -85,12 +70,11 @@ class ScrollingPart extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
                         height: 80,
-                        width: 200,
-                        margin: EdgeInsets.only(
-                            left: 5, top: 0, right: 5, bottom: 0),
+                        width: 180,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/image4.png'),
@@ -100,7 +84,7 @@ class ScrollingPart extends StatelessWidget {
                       ),
                       Container(
                         height: 80,
-                        width: 210,
+                        width: 180,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/image5.png'),
@@ -131,10 +115,9 @@ class ScrollingPart extends StatelessWidget {
                           ),
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                              margin: EdgeInsets.only(
-                                  left: 30, top: 20, right: 0, bottom: 0),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
@@ -145,8 +128,6 @@ class ScrollingPart extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(
-                                  left: 60, top: 20, right: 0, bottom: 0),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
@@ -157,8 +138,6 @@ class ScrollingPart extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(
-                                  left: 60, top: 20, right: 00, bottom: 0),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
@@ -176,24 +155,20 @@ class ScrollingPart extends StatelessWidget {
                   // Another fixed-height child.
                   height: 30.0,
                   alignment: Alignment.centerLeft,
-                  child: Row(children: [
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 50, top: 0, right: 0, bottom: 0),
                         child: Text(
                           '60% Off',
                           style: TextStyle(fontWeight: FontWeight.w800),
                         )),
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 75, top: 0, right: 00, bottom: 0),
                         child: Text(
                           '35% Off',
                           style: TextStyle(fontWeight: FontWeight.w800),
                         )),
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 75, top: 0, right: 00, bottom: 0),
                         child: Text(
                           '55% Off',
                           style: TextStyle(fontWeight: FontWeight.w800),
@@ -204,24 +179,20 @@ class ScrollingPart extends StatelessWidget {
                   // Another fixed-height child.
                   height: 30.0,
                   alignment: Alignment.centerLeft,
-                  child: Row(children: [
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 65, top: 0, right: 0, bottom: 0),
                         child: Text(
                           'PPE',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         )),
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 85, top: 0, right: 00, bottom: 0),
                         child: Text(
                           'Ayurveda',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         )),
                     Container(
-                        margin: EdgeInsets.only(
-                            left: 75, top: 0, right: 00, bottom: 0),
                         child: Text(
                           'Skin Care',
                           style: TextStyle(fontWeight: FontWeight.w600),
