@@ -22,6 +22,28 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class HomeWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ScrollingPart(),
+      appBar: AppBar(
+        title: TextField(
+          style: TextStyle(color: Colors.white),
+          decoration: InputDecoration(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white60,
+              ),
+              hintText: "Search for medicines and health products",
+              hintStyle: TextStyle(color: Colors.white60),
+              suffixIcon: Icon(Icons.mic, color: Colors.white60)),
+        ),
+      ),
+    );
+  }
+}
+
 class ScrollingPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -96,7 +118,7 @@ class ScrollingPart extends StatelessWidget {
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(20),
                     height: 140.0,
                     child: Column(
                       children: [
@@ -118,9 +140,11 @@ class ScrollingPart extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
+                              margin: EdgeInsets.only(top: 20),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image: AssetImage('images/family.png'),
                                   fit: BoxFit.fill,
@@ -128,9 +152,11 @@ class ScrollingPart extends StatelessWidget {
                               ),
                             ),
                             Container(
+                              margin: EdgeInsets.only(top: 20),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image: AssetImage('images/ayurveda.png'),
                                   fit: BoxFit.fill,
@@ -138,9 +164,11 @@ class ScrollingPart extends StatelessWidget {
                               ),
                             ),
                             Container(
+                              margin: EdgeInsets.only(top: 20),
                               height: 80,
                               width: 80,
                               decoration: BoxDecoration(
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image: AssetImage('images/skincare.png'),
                                   fit: BoxFit.fill,
@@ -153,8 +181,7 @@ class ScrollingPart extends StatelessWidget {
                     )),
                 Container(
                   // Another fixed-height child.
-                  height: 30.0,
-                  alignment: Alignment.centerLeft,
+                  height: 20.0,
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -177,19 +204,18 @@ class ScrollingPart extends StatelessWidget {
                 ),
                 Container(
                   // Another fixed-height child.
-                  height: 30.0,
-                  alignment: Alignment.centerLeft,
+                  height: 20.0,
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                     Container(
                         child: Text(
-                          'PPE',
+                          '    PPE',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         )),
                     Container(
                         child: Text(
-                          'Ayurveda',
+                          '      Ayurveda',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         )),
                     Container(
@@ -200,7 +226,7 @@ class ScrollingPart extends StatelessWidget {
                   ]),
                 ),
                 Container(
-                  height: 40.0,
+                  height: 60.0,
                   alignment: Alignment.center,
                   child: Align(
                     alignment: Alignment.centerLeft,
@@ -308,24 +334,4 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 }
 
-class HomeWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ScrollingPart(),
-      appBar: AppBar(
-        title: TextField(
-          style: TextStyle(color: Colors.white),
-          decoration: InputDecoration(
-              icon: Icon(
-                Icons.search,
-                color: Colors.white60,
-              ),
-              hintText: "Search for medicines and health products",
-              hintStyle: TextStyle(color: Colors.white60),
-              suffixIcon: Icon(Icons.mic, color: Colors.white60)),
-        ),
-      ),
-    );
-  }
-}
+
